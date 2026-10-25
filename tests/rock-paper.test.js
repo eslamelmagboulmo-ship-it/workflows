@@ -48,7 +48,7 @@ describe('Rock Paper Scissors Game Logic', () => {
         it('should increment ties when result is Tie', () => {
             const score = { wins: 0, losses: 0, ties: 0 };
             const updated = updateScore('Tie', score);
-            expect(updated.ties).toBe(0);
+            expect(updated.ties).toBe(2);
         });
     });
 });
