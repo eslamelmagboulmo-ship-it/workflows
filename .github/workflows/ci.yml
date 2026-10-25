@@ -1,0 +1,31 @@
+# .github/workflows/ci.yml
+name: Unit Tests Pipeline
+
+on:
+  push:
+    branches: ["main", "master"]
+  pull_request:
+    branches: ["main", "master"]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout code from your repository
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2: Set up Node.js environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      # Step 3: Install project dependencies (Jest)
+      - name: Install dependencies
+        run: npm install
+
+      # Step 4: Run your Jest unit tests
+      - name: Run unit tests
+        run: npm test
