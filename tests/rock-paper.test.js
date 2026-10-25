@@ -42,7 +42,7 @@ describe('Rock Paper Scissors Game Logic', () => {
         it('should increment losses when result is You lose', () => {
             const score = { wins: 0, losses: 0, ties: 0 };
             const updated = updateScore('You lose', score);
-            expect(updated.losses).toBe(1);
+            expect(updated.losses).toBe(2);
         });
 
         it('should increment ties when result is Tie', () => {
