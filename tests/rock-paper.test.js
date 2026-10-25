@@ -49,6 +49,7 @@ describe('Rock Paper Scissors Game Logic', () => {
             const score = { wins: 0, losses: 0, ties: 0 };
             const updated = updateScore('Tie', score);
             expect(updated.ties).toBe(1);
+            //final test
         });
     });
 });
