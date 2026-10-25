@@ -56,4 +56,5 @@ export function updateScore(result, score) {
         score.ties++;
     }
     return score;
+    //final test
 }
